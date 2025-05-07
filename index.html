@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="https://i.postimg.cc/Gp1q4bSx/117297050-removebg-preview.png" type="image/png">
+  <title>Desvie das Bolinhas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="start-screen">
+    <img src="https://i.postimg.cc/Gp1q4bSx/117297050-removebg-preview.png" height="130" width="190">
+    <br>
+    <h1>Desvie das Bolinhas</h1>
+    <button id="startButton">Iniciar Jogo</button>
+    <button id="devButton">Desenvolvedor</button>
+  </div>
+
+  <!-- Jogo -->
+  <div id="game">
+    <div id="background"></div>
+    <div id="player"></div>
+    <div id="score">Pontuação: 0</div>
+    <button id="pauseButton" style="display: none;">Pausar</button>
+
+    <!-- Controles visuais -->
+    <div id="controls">
+      <button id="leftButton">⬅️</button>
+      <button id="rightButton">➡️</button>
+    </div>
+  </div>
+
+  <!-- Tela de Game Over -->
+  <div id="game-over-screen" style="display: none;">
+    <div class="popup">
+      <h2>Game Over</h2>
+      <p id="final-score">Sua pontuação foi: 0</p>
+      <button id="retryButton">Jogar de novo</button>
+      <button id="menuButton">Menu Principal</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="https://files.catbox.moe/luw5ph.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

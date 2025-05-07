@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.postimg.cc/SsYcZ51s/pix.png" type="image/png">
+  <title>Apoie o desenvolvedor</title>
+</head>
+<body style="background-color: #111; font-family: Arial, Helvetica, sans-serif; color: white; text-align: center;">
+
+  <img src="https://i.postimg.cc/SsYcZ51s/pix.png" height="320" width="320">
+  <h1 style="text-shadow: 3px 2px 0px black;">Me incentize a trazer<br> projetos melhores</h1>
+
+  <img src="https://i.postimg.cc/vT8hw8N3/qrcode-pix-1.png" height="320" width="320">
+  <h2 style="text-shadow: 3px 2px 0px black;">Valor R$: 1,00</h2>
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+    <input id="codigoPix" value="00020126510014BR.GOV.BCB.PIX0129ricardosousapixtudo@gmail.com52040000530398654041.005802BR5923RICARDO SOUSA GONCALVES6005recai62140510DOACOESDEV6304AC5F"
+           style="width: 90%; max-width: 200px; padding: 10px; border-radius: 5px; border: none; font-size: 14px;" readonly>
+
+    <button onclick="copiarCodigo()"
+            style="padding: 10px 20px; border: none; background-color: #0fcf6d; color: black; font-weight: bold; border-radius: 5px; cursor: pointer;">
+      📋 Copiar
+    </button>
+  </div>
+
+  <!-- Mensagem "Copiado!" -->
+  <div id="mensagemCopiado" style="margin-top: 8px; font-size: 14px; color: #0fcf6d; display: none;">
+    ✅ Copiado!
+  </div>
+
+  <script>
+    function copiarCodigo() {
+      const input = document.getElementById("codigoPix");
+      input.select();
+      input.setSelectionRange(0, 99999); // Para dispositivos móveis
+      document.execCommand("copy");
+
+      const msg = document.getElementById("mensagemCopiado");
+      msg.style.display = "block";
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 2000); // esconde após 2 segundos
+    }
+  </script>
+
+</body>
+</html>

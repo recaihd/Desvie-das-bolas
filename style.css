@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#start-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #000, #222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+}
+
+#start-screen h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#start-screen button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#start-screen button:hover {
+  background-color: #0056b3;
+}
+
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.postimg.cc/wB7FRpy4/171548cb-b77f-44d2-90cb-0ae8587c432b.jpg') no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.1);
+  z-index: 0;
+}
+
+#player, .enemy, #score, #pauseButton {
+  position: relative;
+  z-index: 1;
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 80px; /* atualizado */
+  height: 80px; /* atualizado */
+  background: cyan;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.enemy {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 50%;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+#pauseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+#game-over-screen .popup {
+  background: #222;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #000;
+}
+
+#game-over-screen .popup h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: red;
+}
+
+#game-over-screen .popup p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+#game-over-screen .popup button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+#game-over-screen .popup button:hover {
+  background-color: #218838;
+}
+
+#menuButton {
+  background-color: #007bff;
+}
+
+#menuButton:hover {
+  background-color: #0056b3;
+}
+
+/* Botões de controle */
+#controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: none;
+  gap: 20px;
+}
+
+#controls button {
+  font-size: 32px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #0056b3;
+}
+
+/* Exibir controles só em telas pequenas */
+@media (max-width: 768px) {
+  #controls {
+    display: flex;
+  }
+}
